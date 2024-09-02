@@ -1,0 +1,48 @@
+[
+    {
+        "name": "date",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "Date field from the review."
+    },
+    {
+        "name": "author",
+        "type": "STRING",
+        "description": "Name of the reviewer."
+    },
+    {
+        "name": "rating",
+        "type": "INTEGER",
+        "description": "Given rating by the reviewer."
+    },
+    {
+        "name": "local_guide",
+        "type": "STRING",
+        "description": "If it is a local guide or not."
+    },
+    {
+        "name": "details",
+        "type": "STRING",
+        "description": "Details of the service/criterion."
+    },
+    {
+        "name": "link",
+        "type": "STRING",
+        "description": "Link to the applicable review."
+    },
+    {
+        "name": "review",
+        "type": "STRING",
+        "description": "Description of the review."
+    },
+    {
+        "name": "source",
+        "type": "STRING",
+        "description": "Source where the review came from."
+    },
+    {
+        "name": "page",
+        "type": "INTEGER",
+        "description": "Page where the review was gathered."
+    }
+]

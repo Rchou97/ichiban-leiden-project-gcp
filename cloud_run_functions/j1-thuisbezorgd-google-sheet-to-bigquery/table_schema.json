@@ -1,0 +1,29 @@
+[
+    {
+        "name": "author",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "Name of the author of the reviewer."
+    },
+    {
+        "name": "date",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "Date field of submission of review."
+    },
+    {
+        "name": "quality",
+        "type": "INTEGER",
+        "description": "Food quality rating."
+    },
+    {
+        "name": "delivery_time",
+        "type": "INTEGER",
+        "description": "Delivery quality rating."
+    },
+    {
+        "name": "review",
+        "type": "STRING",
+        "description": "Review description."
+    }
+]

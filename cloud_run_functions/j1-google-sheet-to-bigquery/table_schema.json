@@ -1,0 +1,120 @@
+[
+    {
+        "name": "Tijd",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "Date field for ingestion."
+    },
+    {
+        "name": "pin",
+        "type": "FLOAT"
+    },
+    {
+        "name": "cash",
+        "type": "FLOAT"
+    },
+    {
+        "name": "ideal",
+        "type": "FLOAT"
+    },
+    {
+        "name": "thuis",
+        "type": "FLOAT"
+    },
+    {
+        "name": "total_am",
+        "type": "FLOAT"
+    },
+    {
+        "name": "n_pin",
+        "type": "INTEGER"
+    },
+    {
+        "name": "n_cash",
+        "type": "INTEGER"
+    },
+    {
+        "name": "n_ideal",
+        "type": "INTEGER"
+    },
+    {
+        "name": "n_thuis",
+        "type": "INTEGER"
+    },
+    {
+        "name": "n_total",
+        "type": "INTEGER"
+    },
+    {
+        "name": "avg_pin",
+        "type": "FLOAT"
+    },
+    {
+        "name": "avg_cash",
+        "type": "FLOAT"
+    },
+    {
+        "name": "avg_ideal",
+        "type": "FLOAT"
+    },
+    {
+        "name": "avg_thuis",
+        "type": "FLOAT"
+    },
+    {
+        "name": "avg_total",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%N_pin",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%N_cash",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%N_ideal",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%N_thuis",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%am_pin",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%am_cash",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%am_ideal",
+        "type": "FLOAT"
+    },
+    {
+        "name": "%am_thuis",
+        "type": "FLOAT"
+    },
+    {
+        "name": "temp",
+        "type": "FLOAT"
+    },
+    {
+        "name": "sun%",
+        "type": "INTEGER"
+    },
+    {
+        "name": "rain%",
+        "type": "INTEGER"
+    },
+    {
+        "name": "windbft",
+        "type": "INTEGER"
+    },
+    {
+        "name": "Comm",
+        "type": "STRING"
+    }
+]

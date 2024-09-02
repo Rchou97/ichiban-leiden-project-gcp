@@ -1,0 +1,28 @@
+[
+    {
+        "name": "name_holiday",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "Name of the holiday."
+    },
+    {
+        "name": "start_date",
+        "type": "DATE",
+        "description": "Start date of the school holiday."
+    },
+    {
+        "name": "end_date",
+        "type": "DATE",
+        "description": "End date of the school holiday."
+    },
+    {
+        "name": "holiday_type",
+        "type": "STRING",
+        "description": "If it is a school holiday or not."
+    },
+    {
+        "name": "source",
+        "type": "STRING",
+        "description": "Source where the data came from."
+    }
+]

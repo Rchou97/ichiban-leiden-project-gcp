@@ -1,0 +1,68 @@
+[
+    {
+        "name": "date",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "Date field from the review."
+    },
+    {
+        "name": "author",
+        "type": "STRING",
+        "description": "Name of the reviewer."
+    },
+    {
+        "name": "rating",
+        "type": "INTEGER",
+        "description": "Given rating by the reviewer."
+    },
+    {
+        "name": "delivery_rating",
+        "type": "INTEGER",
+        "description": "Given rating by the reviewer for the delivery of the food. Only available for Thuisbezorgd reviews."
+    },
+    {
+        "name": "review",
+        "type": "STRING",
+        "description": "Description of the review."
+    },
+    {
+        "name": "review_zh",
+        "type": "STRING",
+        "description": "Translated description of the review in Mandarin."
+    },
+    {
+        "name": "local_guide",
+        "type": "STRING",
+        "description": "If it is a local guide or not."
+    },
+    {
+        "name": "link",
+        "type": "STRING",
+        "description": "Link to the applicable review."
+    },
+    {
+        "name": "day",
+        "type": "STRING",
+        "description": "The day of the date."
+    },
+    {
+        "name": "week_number",
+        "type": "INTEGER",
+        "description": "The number of the week within a year."
+    },
+    {
+        "name": "month",
+        "type": "STRING",
+        "description": "The month of the date."
+    },
+    {
+        "name": "day_of_month",
+        "type": "INTEGER",
+        "description": "The day of the month."
+    },
+    {
+        "name": "source",
+        "type": "STRING",
+        "description": "Source where the review came from."
+    }
+]

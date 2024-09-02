@@ -1,0 +1,34 @@
+[
+    {
+        "name": "name_event",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "Name of the event."
+    },
+    {
+        "name": "start_date",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "Start date of the event."
+    },
+    {
+        "name": "end_date",
+        "type": "DATE",
+        "description": "End date of the event."
+    },
+    {
+        "name": "event_type",
+        "type": "STRING",
+        "description": "Type of event."
+    },
+    {
+        "name": "source",
+        "type": "STRING",
+        "description": "Source where the data came from."
+    },
+    {
+        "name": "url",
+        "type": "STRING",
+        "description": "Link to the applicable event."
+    }
+]
