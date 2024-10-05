@@ -26,16 +26,8 @@ with models.DAG(
         task_id="appdata_to_raw", 
         python_callable=invoke_cloud_function,
         op_kwargs={
-            "cloud_function_url":'.../j1-appdata-to-raw'
+            "cloud_function_url":'.../j1-and-j2-raw-appdata-to-bigquery-to-processed-plot-data'
         }
     )
 
-    t2 = PythonOperator(
-        task_id="raw_to_processed", 
-        python_callable=invoke_cloud_function,
-        op_kwargs={
-            "cloud_function_url":'.../j2-bigquery-to-processed-plot-data'
-        }
-    )
-
-    t1 >> t2
+    t1
