@@ -67,5 +67,7 @@ SELECT
 FROM `ichiban_revenue_appdata` AS app
 LEFT JOIN `weather_leiden` AS weather
     ON app.Tijd = weather.date
-WHERE app.Tijd >= DATE "2022-06-03" AND total_am IS NOT NULL
+-- Due to legacy form
+WHERE app.Tijd >= DATE "2022-06-03"
+    AND total_am IS NOT NULL
 ORDER BY Tijd DESC;
