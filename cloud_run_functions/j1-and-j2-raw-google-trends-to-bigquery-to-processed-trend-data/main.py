@@ -16,9 +16,9 @@ TABLE_SCHEMA_PATH_RAW = "./table_schema_raw.json"
 TABLE_SCHEMA_PATH_PROCESSED = "./table_schema_processed.json"
 BIGQUERY_TABLE_ID = "google_trends"  # table_id
 PARAMS = {
-    "api_key": "ba176ec5b477733df26534353f32ac92d1f86e9449a6aba075214804b124b44b",
+    "api_key": "...",
     "engine": "google_trends",
-    "q": "sushi leiden",
+    "q": "...",
     "data_type": "TIMESERIES",
     "date": f"2023-05-28 {TODAY}",
 }
