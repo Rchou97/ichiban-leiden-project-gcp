@@ -84,4 +84,4 @@ SELECT DISTINCT
 FROM parsed_dates AS t1
 LEFT JOIN `google_trends` AS t2
   ON t1.date = t2.date
-ORDER BY valid_from DESC;tab
+ORDER BY valid_from DESC;
