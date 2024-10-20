@@ -3,38 +3,46 @@
         "name": "date",
         "type": "DATE",
         "mode": "REQUIRED",
-        "description": "Date field for ingestion."
+        "description": "Date of the weather forecast."
     },
     {
         "name": "temp",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "The temperature of the particular date in Leiden (source: Weerlive API)."
     },
     {
         "name": "sun%",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "The sun percentage on the particular date in Leiden (source: Weerlive API)."
     },
     {
         "name": "rain%",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "The percentage of rain on a particular date in Leiden (source: Weerlive API)."
     },
     {
         "name": "windbft",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "The wind force on the particular date in Leiden (source: Weerlive API)."
     },
     {
         "name": "expectedForecast",
-        "type": "STRING"
+        "type": "STRING",
+        "description": "The expected forecast is described in words."
     },
     {
         "name": "summary",
-        "type": "STRING"
+        "type": "STRING",
+        "description": "A summary of the expected forecast."
     },
     {
         "name": "city",
-        "type": "STRING"
+        "type": "STRING",
+        "description": "Metadata of which city the forecast is gathered from (default: Leiden)."
     },
     {
         "name": "source",
-        "type": "STRING"
+        "type": "STRING",
+        "description": "Metadata of which source the weather forecast is gathered from (default: weerlive)."
     }
 ]

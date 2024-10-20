@@ -3,98 +3,121 @@
         "name": "Tijd",
         "type": "DATE",
         "mode": "REQUIRED",
-        "description": "Date field for ingestion."
+        "description": "Date of submission from the applicable revenue. Should be unique. Stored as a string."
     },
     {
         "name": "pin",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Float inserted revenue which is on a pin basis on the given day. Stored as a string."
     },
     {
         "name": "cash",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Float inserted revenue which is on a cash basis on the given day. Stored as a string."
     },
     {
         "name": "ideal",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Float inserted revenue which is on an iDEAL basis on the given day. Stored as a string."
     },
     {
         "name": "thuis",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Float inserted revenue which is coming from Thuisbezorgd on the given day. Stored as a string."
     },
     {
         "name": "total_am",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Float inserted revenue which is coming from a combination of pin, cash, iDEAL, and Thuisbezorgd on the given day."
     },
     {
         "name": "n_pin",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "Integer inserted that resembled the amount of pin cases on the given day."
     },
     {
         "name": "n_cash",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "Integer inserted amount of cash cases on the given day."
     },
     {
         "name": "n_ideal",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "Integer inserted the number of iDEAL cases on the given day."
     },
     {
         "name": "n_thuis",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "Integer inserted the amount of Thuisbezorgd orders on the given day."
     },
     {
         "name": "n_total",
-        "type": "INTEGER"
+        "type": "INTEGER",
+        "description": "Integer inserted for replicating the amount of pin, cash, iDEAL, and Thuisbezorgd cases on the given day."
     },
     {
         "name": "avg_pin",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "The average pin amount by dividing the total amount of pin cases by the number of pin transactions done on that particular date."
     },
     {
         "name": "avg_cash",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "The average cash amount by dividing the total amount of cash by the number of cash transactions done on that particular date."
     },
     {
         "name": "avg_ideal",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "The average iDEAL amount by dividing the total amount of iDEAL cases by the number of iDEAL transactions done on that particular date."
     },
     {
         "name": "avg_thuis",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "The average Thuisbezorgd amount by the total amount of Thuisbezorgd transactions by the number of Thuisbezorgd orders done on that particular date."
     },
     {
         "name": "avg_total",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "The average turnover amount by dividing the total turnover by the amount of transactions (sum of cash, pin, iDEAL, and Thuisbezorgd) done on that particular date."
     },
     {
         "name": "%N_pin",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage pin cases by the total cases multiplied by 100 on that particular date."
     },
     {
         "name": "%N_cash",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage cash cases by the total cases multiplied by 100 on that particular date."
     },
     {
         "name": "%N_ideal",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage iDEAL cases by the total cases multiplied by 100 on that particular date."
     },
     {
         "name": "%N_thuis",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage of Thuisbezorgd cases by the total cases multiplied by 100 on that particular date."
     },
     {
         "name": "%am_pin",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage pin transactions by the total turnover multiplied by 100 on that particular date."
     },
     {
         "name": "%am_cash",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage cash transactions by the total turnover multiplied by 100 on that particular date."
     },
     {
         "name": "%am_ideal",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage iDEAL transactions by the total turnover multiplied by 100 on that particular date."
     },
     {
         "name": "%am_thuis",
-        "type": "FLOAT"
+        "type": "FLOAT",
+        "description": "Percentage of Thuisbezorgd transactions by the total turnover multiplied by 100 on that particular date."
     }
 ]
