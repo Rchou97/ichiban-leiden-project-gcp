@@ -1,0 +1,29 @@
+[
+    {
+        "name": "valid_from",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "Valid from date from the Google trend result."
+    },
+    {
+        "name": "valid_to",
+        "type": "DATE",
+        "mode": "REQUIRED",
+        "description": "Valid to date from the Google trend result."
+    },
+    {
+        "name": "value",
+        "type": "INTEGER",
+        "description": "Integer value of the searched term per date range."
+    },
+    {
+        "name": "query",
+        "type": "STRING",
+        "description": "Used keyword."
+    },
+    {
+        "name": "source",
+        "type": "STRING",
+        "description": "Source where the Google Trend came from."
+    }
+]

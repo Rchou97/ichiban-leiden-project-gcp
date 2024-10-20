@@ -1,0 +1,33 @@
+[
+    {
+        "name": "date",
+        "type": "STRING",
+        "mode": "REQUIRED",
+        "description": "Date range field from the Google trend result."
+    },
+    {
+        "name": "timestamp",
+        "type": "INTEGER",
+        "description": "Timestamp from the Google trend result."
+    },
+    {
+        "name": "query",
+        "type": "STRING",
+        "description": "Used keyword."
+    },
+    {
+        "name": "value",
+        "type": "STRING",
+        "description": "String value of the searched term per date range."
+    },
+    {
+        "name": "extracted_value",
+        "type": "INTEGER",
+        "description": "Integer value of the searched term per date range."
+    },
+    {
+        "name": "source",
+        "type": "STRING",
+        "description": "Source where the Google Trend came from."
+    }
+]
