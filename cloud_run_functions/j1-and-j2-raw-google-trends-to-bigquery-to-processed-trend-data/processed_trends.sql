@@ -75,7 +75,7 @@ SELECT
 FROM prep_dates
 )
 
-SELECT
+SELECT DISTINCT
   t1.valid_from,
   t1.valid_to,
   t2.extracted_value AS value,
