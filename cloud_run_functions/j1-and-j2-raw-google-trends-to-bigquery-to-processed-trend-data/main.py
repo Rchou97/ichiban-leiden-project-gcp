@@ -60,7 +60,7 @@ def dataframe_to_bigquery(
         key_path: str,
         schema_path: str,
         bigquery_dataset_id: str,
-        project_id_gc: str = "185701563519",
+        project_id_gc: str = "...",
         load_type: str = "load_parquet",
 ) -> None:
     """save dataframe to bigquery"""

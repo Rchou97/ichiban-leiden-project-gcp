@@ -3,7 +3,7 @@ WITH prep_dates AS (
     date,
     SPLIT(TRIM(REGEXP_REPLACE(date, r',\s*\d{4}', '')), '–') AS date_parts,
     REGEXP_EXTRACT(date, r'\d{4}') AS year
-  FROM `gcp-ichiban-data-ingestion.ichiban_data_raw.google_trends`
+  FROM `google_trends`
 ),
 
 parsed_dates AS (
@@ -82,6 +82,6 @@ SELECT
   t2.query,
   t2.source
 FROM parsed_dates AS t1
-LEFT JOIN `gcp-ichiban-data-ingestion.ichiban_data_raw.google_trends` AS t2
+LEFT JOIN `google_trends` AS t2
   ON t1.date = t2.date
 ORDER BY valid_from DESC;tab
