@@ -31,6 +31,16 @@
         "description": "Translated description of the review in Mandarin."
     },
     {
+        "name": "review_en",
+        "type": "STRING",
+        "description": "Translated description of the review in English."
+    },
+    {
+        "name": "sentiment_score_en",
+        "type": "FLOAT",
+        "description": "Sentiment score for the English translated reviews."
+    },
+    {
         "name": "local_guide",
         "type": "STRING",
         "description": "If it is a local guide or not."
