@@ -1,6 +1,4 @@
 from google.oauth2 import service_account
-from google.cloud import bigquery
-from google.auth.transport.requests import AuthorizedSession
 
 import functions_framework
 import pandas as pd
