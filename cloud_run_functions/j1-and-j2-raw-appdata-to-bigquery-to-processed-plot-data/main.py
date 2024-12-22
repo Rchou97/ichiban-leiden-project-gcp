@@ -1,11 +1,8 @@
 from google.oauth2 import service_account
-from google.cloud import bigquery
-from google.auth.transport.requests import AuthorizedSession
 
 import functions_framework
 import pandas as pd
 import json
-import os
 import pandas_gbq as pdg
 
 KEY_PATH = "./my_service_account_credentials.json"

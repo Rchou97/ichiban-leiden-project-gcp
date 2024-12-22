@@ -1,5 +1,6 @@
 from google.oauth2 import service_account
 from deep_translator import GoogleTranslator
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 import functions_framework
 import pandas as pd
@@ -13,18 +14,34 @@ BIGQUERY_TABLE_ID = "..."  # table_id
 # processed SQL queries
 processed_reviews_query = "./processed_reviews.sql"
 
+# initialise SentimentIntensityAnalyzer
+sentiment = SentimentIntensityAnalyzer()
 
-def translate_to_mandarin(text: str) -> None:
+def google_translator(text: str, language: str) -> None:
     """Translate text to Mandarin"""
     if text is None:
         return None
     else:
         try:
-            translated_text = GoogleTranslator(source='auto', target='zh-CN').translate(text)
+            translated_text = GoogleTranslator(source='auto', target=language).translate(text)
             return translated_text
         except Exception as e:
-            print(f"Error translating text: {e}")
-            return text
+            print(f"ERROR - Error translating text: {e}")
+            pass
+
+
+def get_sentiment(text: str) -> float:
+    """Calculate the sentiment of the text"""
+
+    if text is None or not isinstance(text, str):
+        return None
+    else:
+        try:
+            sentiment_score = sentiment.polarity_scores(text)["compound"]
+            return sentiment_score
+        except Exception as e:
+            print(f"ERROR - Error translating text: {e}")
+            return 0
 
 
 def read_bigquery_to_pandas_df(
@@ -34,7 +51,7 @@ def read_bigquery_to_pandas_df(
 ) -> pd.DataFrame:
     """Read data via BigQuery in a Pandas dataframe"""
 
-    creds = service_account.Credentials.from_service_account_file(KEY_PATH)
+    creds = service_account.Credentials.from_service_account_file(key_path)
     sql = open(query_or_table, "r").read()
 
     df = pdq.read_gbq(
@@ -73,7 +90,7 @@ def dataframe_to_bigquery(
         table_schema=schema,
         verbose=False,
     )
-    print(f"Dataframe saved. Numbers of rows loaded: {len(df)}")
+    print(f"INFO - Dataframe saved. Numbers of rows loaded: {len(df)}")
 
 
 @functions_framework.http
@@ -96,10 +113,17 @@ def main(request):
         query_or_table=processed_reviews_query
     )
 
-    # translate review to Mandarin
-    df_reviews['review_zh'] = df_reviews['review'].apply(translate_to_mandarin)
+    # translate review to Mandarin and English
+    print("INFO - Translating the reviews to Mandarin and English (where necessary)")
+    df_reviews['review_zh'] = df_reviews['review'].apply(google_translator, language='zh-CN')
+    df_reviews['review_en'] = df_reviews['review'].apply(google_translator, language='en')
 
-    # ingestion of the processed events data to BigQuery
+    # calculate sentiment
+    print("INFO - Translation done. Calculate sentiment scores for English reviews")
+    df_reviews['sentiment_score_en'] = df_reviews['review_en'].apply(get_sentiment)
+
+    # ingestion of the processed reviews data to BigQuery
+    print("INFO - Sentiment calculation done. Process in BigQuery table")
     dataframe_to_bigquery(
         df=df_reviews,
         bigquery_table_id=BIGQUERY_TABLE_ID,
